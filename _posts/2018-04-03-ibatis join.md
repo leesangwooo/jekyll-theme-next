@@ -32,7 +32,7 @@ tags: iBatis
     예2. ProdVO) BuyerVO buyer;
     ```
 
-##*예시. 1 대 N의 관계*
+## *예시. 1 대 N의 관계*
 3. `SQLMap.xml` 설정
 	- Nested Map (중첩맵) 방식
 		1) `<select>` 조인 쿼리 등록

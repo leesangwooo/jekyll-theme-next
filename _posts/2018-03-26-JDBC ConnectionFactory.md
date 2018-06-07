@@ -13,10 +13,10 @@ pooling, BasicDataSource
 클라이언트의 요청으로부터 서버의 요청 분석, 데이터베이스 `접속(Connection)`과 데이터 조회, 다시 서버의 데이터 가공 과정을 거쳐 클라이언트에게 최종 응답데이터를 전송하기까지, JDBC 프로그래밍은 많은 작업시간을 요구한다.
 JDBC에서 가장 많은 네트워크 지연시간을 유발하는 것이 Connection 과정이다.
 JDBC의 퍼포먼스를 향상시키기 위해 다음과 같은 방법들이 있다.
-###1. 리펙토링
-#####매요청마다 Connection 객체를 새로 생성하지 않고,
-#####Connection 객체 생성을 위한 클래스(ConnectionFactory)를 분리,
-#####*static { 초기화 블럭 }* 에서 '한번만' 생성하고 객체 상태를 유지하기
+### 1. 리펙토링
+##### 매요청마다 Connection 객체를 새로 생성하지 않고,
+##### Connection 객체 생성을 위한 클래스(ConnectionFactory)를 분리,
+##### *static { 초기화 블럭 }* 에서 '한번만' 생성하고 객체 상태를 유지하기
 <table>
 	<tr>
     	<td>장점</td>
@@ -32,10 +32,10 @@ JDBC의 퍼포먼스를 향상시키기 위해 다음과 같은 방법들이 있
     </tr>
 </table>
 
-##2. (+) DataSource 라이브러리 이용하기
-#####*DBCP* -  Database connection pooling services. 
+## 2. (+) DataSource 라이브러리 이용하기
+##### *DBCP* -  Database connection pooling services. 
 아파치 `commons` 유틸의 dbcp (org.apache.commons.dbcp) - [링크](http://commons.apache.org/)
-#####*Pooling*
+##### *Pooling*
 Connection Pool이라는 커넥션 관리자가 연결과 해제를 직접 관리한다. 일정 수의 컨넥션 객체를 미리 생성하여 요청을 기다리다가, 요청 발생시 커넥션을 차례로 할당한다. 처리가 완료된 커넥션은 Connection Pool에 다시 반납한다.
 <table>
 	<tr>
@@ -46,7 +46,7 @@ Connection Pool이라는 커넥션 관리자가 연결과 해제를 직접 관�
     </tr>
 </table>
 
-#####*코드 예시*
+##### *코드 예시*
 ```java
 public class ConnectionFactory {
 	static String url;
