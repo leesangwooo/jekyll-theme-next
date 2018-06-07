@@ -1,4 +1,11 @@
-JDBC ConnectionFactory
+---
+title: JDBC ConnectionFactory
+description: JDBC ConnectionFactory
+categories:
+ - tutorial
+tags: JDBC
+---
+
 
 pooling, BasicDataSource
 

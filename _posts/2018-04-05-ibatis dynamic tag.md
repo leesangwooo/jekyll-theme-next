@@ -1,6 +1,14 @@
-##iBatis dynamic태그
+---
+title: iBatis dynamic태그
+description: iBatis dynamic태그
+categories:
+ - java
+tags: iBatis
+---
+
+## iBatis dynamic태그
 dynamic태그는 파라미터의 조건에 의해 sqlMap.xml에 등록한 Query에 조건문을 추가하거나 문자열을 더하는 등 동적인 수정을 가능하게 한다.
-####dynamic태그의 종류
+#### dynamic태그의 종류
 1. 이항연산 요소
 	- *`<isEqual>`* 프라퍼티와 값 또는 다른 프라퍼티가 같은지 체크.
 	- *`<isNotEqual>`* 프라퍼티와 값 또는 다른 프라퍼티가 같지 않은지 체크.
@@ -21,7 +29,7 @@ dynamic태그는 파라미터의 조건에 의해 sqlMap.xml에 등록한 Query�
 	- `<isNotParameterPresent>` 파라미터 객체가 존재하지(null) 않는지 보기위해 체크.
 	- `<iterate>` java.util.Collection 이나 java.util.Iterator 또는 배열 구현체인 프라퍼티에 대해 반복적으로 처리
 
-####dynamic태그의 사용
+#### dynamic태그의 사용
 ***-ex) sqlMap.xml*** (MEMBER 테이블의 레코드를 조회하기 위한 쿼리를 등록한 파일)
 ```xml
 <sqlMap namespace="Member">

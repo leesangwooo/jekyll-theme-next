@@ -1,7 +1,16 @@
-JDBC ResultSet Mapping하기(1)
-Map과 VO의 사용
+---
+title: JDBC ResultSet Mapping하기(1)
+description: Map과 VO의 사용
+categories:
+ - tutorial
+tags: JDBC
+---
 
-####JDBC ResultSet
+
+
+
+
+#### JDBC ResultSet
 ***
 JDBC의 쿼리 결과는 int 또는 ResultSet의 형태로 반환된다.
 - `int executeUpdate()` : 갱신을 위한 쿼리 실행 메소드. 갱신한 행의 갯수를 return한다.
@@ -11,8 +20,8 @@ JDBC의 쿼리 결과는 int 또는 ResultSet의 형태로 반환된다.
 &nbsp;&nbsp;이때 `ResultSet`은 select 쿼리를 사용하여 조회한 레코드 값들을 테이블 형태로 저장하며, 조회한 칼럼명과 , 칼럼수, 칼럼 타입 등의 메타데이터를 갖고있다. 
 [참고.](http://nyhooni.tistory.com/71)
 
-####JDBC ResultSet을 Mapping하기
-***
+#### JDBC ResultSet을 Mapping하기
+
 &nbsp;&nbsp;조회한 데이터를 효과적으로 사용하기 위해 ResultSet을 Collection 또는 VO, iBatis 등을 활용해 매핑할 수 있다.
 아래는 가장 기본적인 방법인 Collection과 VO를 활용한 매핑에 대해 정리하였다.
 <table>
@@ -57,7 +66,7 @@ JDBC의 쿼리 결과는 int 또는 ResultSet의 형태로 반환된다.
     </tbody>
 </table>
 
-####코드분석
+#### 코드분석
 ***
 예) DB에 저장된 BUYER 테이블을 SELECT하기 위해 DAO에서 JDBC를 구현한 메소드
 - Map 과 VO는 요구하는 상황에 맞게 선택적으로 사용한다.

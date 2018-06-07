@@ -1,3 +1,11 @@
+---
+title: Front Controller 구현하기
+description: Front Controller 구현하기
+categories:
+ - java
+tags:
+---
+
 ```java
 public class FrontController extends HttpServlet { // 서블릿 기능을 위해 HttpServlet 상속
 

@@ -1,3 +1,11 @@
+---
+title: iBatis를 이용한 JOIN
+description: iBatis를 이용한 JOIN
+categories:
+ - java
+tags: iBatis
+---
+
 ## iBatis를 이용한 JOIN
 
 1.  메인데이터를 가진 테이블을 기준으로 각 `테이블의 관계`를 파악한다.
