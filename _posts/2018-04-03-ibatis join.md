@@ -3,7 +3,7 @@ title: iBatis를 이용한 JOIN
 description: iBatis를 이용한 JOIN
 categories:
  - labs
-tags: java, orm
+tags: java orm
 ---
 
 ## iBatis를 이용한 JOIN

@@ -3,7 +3,7 @@ title: iBatis dynamic태그
 description: iBatis dynamic태그
 categories:
  - labs
-tags: java, orm
+tags: java orm
 ---
 
 ### iBatis dynamic태그
