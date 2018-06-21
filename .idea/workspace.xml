@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ab2f0e6-7db2-4b8e-bbd2-ead03a4e8c3f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-06-06-로그의전설-FE.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-06-06-로그의전설-FE.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,8 +29,8 @@
         <entry file="file://$PROJECT_DIR$/_posts/2018-06-06-로그의전설-FE.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="368">
-                <caret line="46" column="182" selection-start-line="46" selection-start-column="182" selection-end-line="46" selection-end-column="182" />
+              <first_editor relative-caret-position="276">
+                <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
               </first_editor>
               <second_editor />
             </state>
@@ -250,12 +249,12 @@
       <updated>1529404883086</updated>
       <workItem from="1529404884372" duration="7252000" />
       <workItem from="1529454386803" duration="2756000" />
-      <workItem from="1529547680751" duration="571000" />
+      <workItem from="1529547680751" duration="1026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11280000" />
+    <option name="totallyTimeSpent" value="11735000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -268,7 +267,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32890365" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32447398" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -779,8 +778,8 @@
     <entry file="file://$PROJECT_DIR$/_posts/2018-06-06-로그의전설-FE.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="368">
-            <caret line="46" column="182" selection-start-line="46" selection-start-column="182" selection-end-line="46" selection-end-column="182" />
+          <first_editor relative-caret-position="276">
+            <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
           </first_editor>
           <second_editor />
         </state>
