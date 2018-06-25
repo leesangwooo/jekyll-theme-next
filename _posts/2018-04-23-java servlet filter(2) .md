@@ -1,9 +1,9 @@
 ---
-title: 자바 서블릿 필터 사용하기(2) 파일 업로드를 위한 마임설정
-description: 자바 서블릿 필터 사용하기
+title: java servlet filter(2) 
+description: 자바 서블릿 필터, 파일 업로드를 위한 마임설정
 categories:
- - java
-tags: servlet
+ - labs
+tags: java
 ---
 
 

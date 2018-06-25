@@ -2,13 +2,16 @@
 title: AJAX와 JAVA SERVLET의 데이터 교환
 description: AJAX와 JAVA SERVLET의 데이터 교환
 categories:
- - java
-tags: ajax
+ - labs
+tags: java
 ---
 
-## AJAX와 JAVA SERVLET의 데이터 교환
+기초학습을 위해 하드코딩 방식으로 소개되었다. 주석한 서블릿의 역할과 스트링버퍼의 사용법 정도만 기억하자.
+
+### AJAX와 JAVA SERVLET의 데이터 교환
 AJAX의 비동기 요청으로부터 JAVA SERVLET에서 이를 처리하여 반환 데이터를 다시 AJAX 요청부로 전송하는 과정
-#### 순서
+
+### 순서
 1. 클라이언트사이드에서 AJAX로 비동기 요청
  : *`$.ajax`* 함수의 속성 설정하기
 	- `url` : 요청을 전송할 url
@@ -23,15 +26,15 @@ AJAX의 비동기 요청으로부터 JAVA SERVLET에서 이를 처리하여 반�
 	
 2. 자바 서블릿에서 요청을 수신하여 ajax로 결과 데이터 반환
 	
-    1. ajax에서 설정한 반환 데이터의 타입(dataType)을 확인하기 위해 request header의 *`accept`* 속성값을 확인.
+    1. ajax에서 설정한 반환 데이터의 타입(dataType)을 확인하기 위해 request header의 `accept` 속성값을 확인.
     
     2. `accept` 속성값에 따라 반환 데이터의 표현방식을 변환.(Marshalling)
     
-    3. 반환 데이터를 response의 *`printWriter.print()'*로 전송(=JSP 표현식*`<%= %>`*)
+    3. 반환 데이터를 response의 `printWriter.print()' 로 전송 (=JSP 표현식 `<%= %>`)
 
-#### CODE SAMPLE
-***-ex) JavaScript*** (jquery ajax)
-```javascript
+### CODE SAMPLE
+ex) JavaScript (jquery ajax)
+````javascript
 $.ajax({
     url : "<%=request.getContextPath()%>/prod/getLprodList.do", 
     method : "get",
@@ -49,9 +52,10 @@ $.ajax({
     }
 });
 
-```
-***-ex) Java Servlet*** (HTTPServlet을 상속받은 java class)
-```java
+````
+
+ex) Java Servlet (HTTPServlet을 상속받은 java class)
+````java
 public class LprodAjaxController extends HTTPServlet {
 
 	@Override
@@ -61,12 +65,12 @@ public class LprodAjaxController extends HTTPServlet {
 		// ajax에서 설정한 반환 데이터의 타입을 확인하기 위해 request header의 accept 값을 확인한다.
 		String accept = req.getHeader("Accept");
 		
-        // 전송할 데이터
+                // 전송할 데이터
 		IOthersDAO othersDAO = new OthersDAOImpl();
 		Map<String, Object> lprodMap = othersDAO.selectLprodList(); 
         
 		// Marshalling : 데이터 공통 표현방식에 따라 변환하는 작업 (to JSON, XML...)
-        //  json 객체형식으로 표현 {"P101":"전자제품","P102":"컴퓨터제품",...}
+                //  json 객체형식으로 표현 {"P101":"전자제품","P102":"컴퓨터제품",...}
 		StringBuffer json = new StringBuffer("{");
 		String ptrn = "\"%s\":\"%s\",";
 		for (Entry<String, Object> entry : lprodMap.entrySet()) {
@@ -74,7 +78,8 @@ public class LprodAjaxController extends HTTPServlet {
 			Object propValue = entry.getValue();
 			json.append(String.format(ptrn, propName, propValue));
 		}
-        // 마지막 ','를 제거
+		
+                // 마지막 ','를 제거
 		json.deleteCharAt(json.lastIndexOf(","));
 		json.append("}");
 		// UnMarshalling 공통 표현방식으로 전달된 데이터를 특정 언어로 변환하는 작업(from JSON, XML)
@@ -88,4 +93,4 @@ public class LprodAjaxController extends HTTPServlet {
 			}
 		}
 	}
-```
+````

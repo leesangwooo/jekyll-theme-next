@@ -2,15 +2,16 @@
 title: Front Controller 구현하기
 description: Front Controller 구현하기
 categories:
- - java
-tags:
+ - labs
+tags: jsp
 ---
 
+### 서블릿
 ```java
 public class FrontController extends HttpServlet { // 서블릿 기능을 위해 HttpServlet 상속
 
-	// HttpServlet의 service 콜백 메소드를 오버라이드
-    // (get과 post 등의 모든 요청 방식은 service 메소드에 의해 호출된다.)
+        // HttpServlet의 service 콜백 메소드를 오버라이드
+        // (get과 post 등의 모든 요청 방식은 service 메소드에 의해 호출된다.)
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
@@ -18,8 +19,9 @@ public class FrontController extends HttpServlet { // 서블릿 기능을 위해
 		req.setCharacterEncoding("UTF-8");
         
 		// 요청 uri로부터 
-        String uri = req.getRequestURI();
+                String uri = req.getRequestURI();
 		uri = uri.substring(req.getContextPath().length()).split(";")[0];
+		
 		// 1. 커맨트 핸들러를 호출하고 그로부터 goPage를 반환 .
 		// 2. 이동방식
 		String goPage = null;
@@ -57,6 +59,8 @@ public class FrontController extends HttpServlet { // 서블릿 기능을 위해
 	}
 }
 ```
+
+## web.xml
 ```xml
 <web-app>
 ...

@@ -1,15 +1,15 @@
 ---
-title: 자바 서블릿 필터 사용하기
+title: java servlet filter(1)
 description: 자바 서블릿 필터 사용하기
 categories:
- - java
-tags: servlet
+ - labs
+tags: java
 ---
 
 
 javax.servlet.Filter
 
-## 서블릿 필터의 쓰임
+### 서블릿 필터의 쓰임
 1. Authentication Filters : 인증 작업에 사용
 2. Logging and Auditing Filters : 로깅 작업에 사용
 3. Image conversion Filters : 이미지 포맷, 크기 등의 변환 작업에 사용
@@ -20,7 +20,7 @@ javax.servlet.Filter
 8. XSL/T filters : 보안과 관련
 9. Mime-type chain Filter
 
-## 기본 구조
+### 기본 구조
 - Filter의 구현과 오버라이드 메소드
 ```java
 // javax.servlet.Filter
@@ -43,7 +43,7 @@ public class FilterDesc implements Filter {
 ```
 
 - `web.xml`에 필터 등록하기
-```xml
+````xml
 	<!-- 필터 체인의 첫번째 필터 -->
 	<filter>
 		<filter-name>필터_이름_1</filter-name>
@@ -53,6 +53,7 @@ public class FilterDesc implements Filter {
 		<filter-name>필터_이름_1</filter-name>
 		<url-pattern>/*</url-pattern> <!-- 모든 컨텍스트의 요청에 대해 해당 필터를 거친다. -->
 	</filter-mapping>
+	
 	<filter>
 		<filter-name>secondFilter</filter-name>
 		<filter-class>kr.or.ddit.filter.SecondFilter</filter-class>
@@ -61,14 +62,14 @@ public class FilterDesc implements Filter {
 		<filter-name>secondFilter</filter-name>
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
-    ...
-```
-	- 주의
-		1. 필터를 적용할 서블릿보다 먼저 태그를 생성하며, 필터 체인에 등록할 순서대로 생성한다.
-		2. 클래스에 @WebFilter("/*")로 선언하여 설정을 대신할 수 있지만, 
-	   필터의 경우 작동 순서를 지정하여 필터체인으로 관리하는데 어노테이션(@) 방법으로는 이 순서 지정이 어렵다.
+````
 
-## 코드 샘플 1.  블라인드 필터
+- 주의
+    1. 필터를 적용할 서블릿보다 먼저 태그를 생성하며, 필터 체인에 등록할 순서대로 생성한다.
+    2. 클래스에 @WebFilter("/*")로 선언하여 설정을 대신할 수 있지만, 
+   필터의 경우 작동 순서를 지정하여 필터체인으로 관리하는데 어노테이션(@) 방법으로는 이 순서 지정이 어렵다.
+
+### 코드 샘플 1.  블라인드 필터
 ```java
 /**
  * 누적 경고 횟수를 카운트하여 5회 이상인 경우 서비스 이용을 제한하는(blind) 기능을 하는 필터
@@ -136,7 +137,7 @@ public class BlindFilter implements Filter {
 }
 ```
 
-## 코드샘플 2.  Character Encoding 필터
+### 코드샘플 2.  Character Encoding 필터
 ```java
 public class CharacterEncodingFilter implements Filter{
 	private String encoding;
