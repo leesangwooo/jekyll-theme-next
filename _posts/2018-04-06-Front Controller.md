@@ -1,5 +1,5 @@
 ---
-title: Front Controller 구현하기
+title: java servlet으로 Front Controller 구현하기
 description: Front Controller 구현하기
 categories:
  - labs

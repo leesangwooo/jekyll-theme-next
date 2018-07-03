@@ -54,8 +54,7 @@ tags: challenge
 | 0. 알고리즘 | 코딩 | 알고리즘 JAVA 코딩 | 인프런.[영리한 프로그래밍을 위한 알고리즘 강좌](https://www.inflearn.com/course/%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B0%95%EC%A2%8C/?subscribe), 프로그래머스 알고리즘 문제 |
 | 1. NodeJS | 응용 | Node.js 기초, Express, MySQL 연동 | 생활코딩.[Node.Js 활용하기](https://www.inflearn.com/course/node-js-%ED%99%9C%EC%9A%A9/?subscribe) |
 | 2. React-Redux | 코딩 | Node.js, MongoDB 연동한 예제 프로젝트 클론코딩, 웹팩 기초 | 인프런.[React & Express 를 이용한 웹 어플리케이션 개발하기](https://www.inflearn.com/course/react-%EA%B0%95%EC%A2%8C-velopert/) |
-| 3. Vue.js  | 기초 | Vue.js 기초 | 인프런.[누구나 다루기 쉬운 Vue.js 프론트 개발](https://www.inflearn.com/course/vue-pwa-vue-js-%EA%B8%B0%EB%B3%B8/) | 
- 
+| 3. 시스템 프로그래밍  | 기초 | 시스템 모니터링 명령어, 튜닝포인트 정리 |  웹 도큐먼트들 ([oracle](https://docs.oracle.com/cd/E24846_01/html/E23088/toc.html), [와탭 기술블로그](http://tech.whatap.io/))|  
 
 
 
